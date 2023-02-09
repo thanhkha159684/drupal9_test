@@ -9,7 +9,7 @@ hooks:
         # echo "Hello World"
         # date >> test.txt
         cmd: |-
-          echo "Hello World"
+          php /var/www/html/composer.phar install
       - tag: ".*"
         # matches any tags
         # run commands or scripts from here; eg:
