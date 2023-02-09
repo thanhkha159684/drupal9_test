@@ -1,0 +1,12 @@
+# Github
+name: issue-greeter
+on: "push"
+jobs:
+  notify-devpanel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: notify
+        run: |
+          curl -s -X PUT https://alpha.site.devpanel.com/webhooks/applications/63e470fc36cc35600f9bf18d/git \
+            -d '{}' \
+            -H "Authorization: Bearer ${{ secrets.DP_TOKEN }}"
